@@ -3,45 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Pokemon</title>
-  <style>
-    
-    body {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    img{
-      height: 300px;
-    }
-
-  </style>
-
 </head>
+
+
 <body>
   <img src="" alt="" id="pokemon">
   <h1 id="nombrePokemon">Nombre del Pokemon: </h1>
-  <script>
-
-    const pokemon = document.getElementById('pokemon')
-    const nombrePokemon = document.getElementById('nombrePokemon')
-    const id = Math.ceil(Math.random() * 898)
+  <input type="number" id="id" placeholder="Ingresa ID del Pokémon" />
+  <br>
+  <button onclick="getPokemon()">Traer Pokemon</button>
 
 
-    const renderPokemon = (image) => {
-      pokemon.setAttribute('src', image)
-    }
+  <script src="app/app.js"></script>
 
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    .then(response => response.json())
-    .then(data => {
-      renderPokemon(data.sprites.front_default)
-      nombrePokemon.innerHTML = `Nombre del Pokemon: ${data.forms[0].name}`
-    })
-
-   
-</script>
 
 </body>
 
