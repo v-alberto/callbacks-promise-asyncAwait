@@ -1,5 +1,5 @@
 const API_URL = 'https://pokeapi.co/api/v2/pokemon/'
-
+const cuantosPokemonsQuieres = 5
 const imgPokemon = document.getElementById('imgPokemon')
 const imgPokemon2= document.getElementById('imgPokemon2')
 const imgPokemon3= document.getElementById('imgPokemon3')
@@ -54,7 +54,12 @@ const renderImages9 = image9 =>{
 const renderImages10 = image10 =>{
   imgPokemon10.setAttribute('src', image10)
 }
+
+
+
+
 const fetchData = async () => {
+  
   const id = Math.ceil(Math.random() * 150)
   const id2 = Math.ceil(Math.random() * 150)
   const id3 = Math.ceil(Math.random() * 150)
@@ -70,13 +75,13 @@ const fetchData = async () => {
     let res = await fetch(`${API_URL}${id}`)
     let data = await res.json()
     renderImages(data.sprites.other.dream_world.front_default)
-    namePokemon.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id} <br> Ataque: ${data.stats[1].base_stat}`
+    namePokemon.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
       
     
     let res2 = await fetch(`${API_URL}${id2}`)
     let data2 = await res2.json()
     renderImages2(data2.sprites.other.dream_world.front_default)
-    namePokemon2.innerHTML = `Nombre: ${data2.forms[0].name} <br> ID: ${id2} <br> Ataque: ${data.stats[1].base_stat}`
+    namePokemon2.innerHTML = `Nombre: ${data2.forms[0].name} <br> ID: ${id2} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
         
     
         fetch(`${API_URL}${id3}`)
@@ -84,7 +89,7 @@ const fetchData = async () => {
       .then(data => {
           renderImages3(data.sprites.other.dream_world.front_default)
           
-          namePokemon3.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id3}  <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon3.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id3}  <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
     
         })
     
@@ -92,14 +97,14 @@ const fetchData = async () => {
       .then(response => response.json())
       .then(data => {
           renderImages4(data.sprites.other.dream_world.front_default)
-          namePokemon4.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id4} <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon4.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id4} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
       })
     
           fetch(`${API_URL}${id5}`)
       .then(response => response.json())
       .then(data => {
           renderImages5(data.sprites.other.dream_world.front_default)
-          namePokemon5.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id5} <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon5.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id5} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
         })
     
     
@@ -107,7 +112,7 @@ const fetchData = async () => {
       .then(response => response.json())
       .then(data => {
           renderImages6(data.sprites.other.dream_world.front_default)
-          namePokemon6.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id6} <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon6.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id6} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
         })
     
     
@@ -115,7 +120,7 @@ const fetchData = async () => {
       .then(response => response.json())
       .then(data => {
           renderImages7(data.sprites.other.dream_world.front_default)
-          namePokemon7.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id7} <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon7.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id7} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
         })
     
     
@@ -123,7 +128,7 @@ const fetchData = async () => {
       .then(response => response.json())
       .then(data => {
           renderImages8(data.sprites.other.dream_world.front_default)
-          namePokemon8.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id8} <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon8.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id8} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
         })
     
     
@@ -131,7 +136,7 @@ const fetchData = async () => {
       .then(response => response.json())
       .then(data => {
           renderImages9(data.sprites.other.dream_world.front_default)
-          namePokemon9.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id9} <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon9.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id9} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}`
         })
     
     
@@ -139,7 +144,7 @@ const fetchData = async () => {
       .then(response => response.json())
       .then(data => {
           renderImages10(data.sprites.other.dream_world.front_default)
-          namePokemon10.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id10} <br> Ataque: ${data.stats[1].base_stat}`
+          namePokemon10.innerHTML = `Nombre: ${data.forms[0].name} <br> ID: ${id10} <br> Ataque: ${data.stats[1].base_stat} <br> Hp: ${data.stats[0].base_stat}}`
       
         })
   } catch(error){
