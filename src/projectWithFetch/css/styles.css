@@ -3,7 +3,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #F4C904;
+  background-color: #0a043c;
   
 }
 img{
@@ -15,4 +15,30 @@ button{
 }
 .namePokemon {
   text-transform: capitalize;
+}
+.grid{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap: 10px;
+}
+.card{
+  background-color: #03506f;
+  text-align: center;
+  border-radius:5px;
+}
+h4{
+  background-color: #a3ddcb;
+  color: black;
+}
+button {
+  background-color: #3E53A5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }

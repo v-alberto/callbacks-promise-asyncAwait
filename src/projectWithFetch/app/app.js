@@ -1,7 +1,5 @@
 const API_URL = 'https://pokeapi.co/api/v2/pokemon/'
-const getPokemon = () => {
-  
-}
+
 const imgPokemon = document.getElementById('imgPokemon')
 const imgPokemon2= document.getElementById('imgPokemon2')
 const imgPokemon3= document.getElementById('imgPokemon3')
@@ -24,16 +22,7 @@ const namePokemon8 = document.getElementById('namePokemon8')
 const namePokemon9 = document.getElementById('namePokemon9')
 const namePokemon10 = document.getElementById('namePokemon10')
 // const idPokemon = document.getElementById('idPokemon').value
-const id = Math.ceil(Math.random() * 150)
-const id2 = Math.ceil(Math.random() * 150)
-const id3 = Math.ceil(Math.random() * 150)
-const id4 = Math.ceil(Math.random() * 150)
-const id5 = Math.ceil(Math.random() * 150)
-const id6 = Math.ceil(Math.random() * 150)
-const id7 = Math.ceil(Math.random() * 150)
-const id8 = Math.ceil(Math.random() * 150)
-const id9 = Math.ceil(Math.random() * 150)
-const id10 = Math.ceil(Math.random() * 150)
+
 
 const renderImages = image =>{
   imgPokemon.setAttribute('src', image)
@@ -66,6 +55,16 @@ const renderImages10 = image10 =>{
   imgPokemon10.setAttribute('src', image10)
 }
 const fetchData = async () => {
+  const id = Math.ceil(Math.random() * 150)
+  const id2 = Math.ceil(Math.random() * 150)
+  const id3 = Math.ceil(Math.random() * 150)
+  const id4 = Math.ceil(Math.random() * 150)
+  const id5 = Math.ceil(Math.random() * 150)
+  const id6 = Math.ceil(Math.random() * 150)
+  const id7 = Math.ceil(Math.random() * 150)
+  const id8 = Math.ceil(Math.random() * 150)
+  const id9 = Math.ceil(Math.random() * 150)
+  const id10 = Math.ceil(Math.random() * 150)
   try {
     
     let res = await fetch(`${API_URL}${id}`)
@@ -148,4 +147,4 @@ const fetchData = async () => {
   }
 }
 
-fetchData() 
+fetchData()
