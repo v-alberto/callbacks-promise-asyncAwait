@@ -7,7 +7,9 @@ body {
   
 }
 img{
-  height: 100px;
+  height: 200px;
+  width: 200px;
+  padding: 1em;
 }
 
 button{
@@ -15,6 +17,7 @@ button{
 }
 .namePokemon {
   text-transform: capitalize;
+  color: #0a043c;
 }
 .grid{
   display: grid;
@@ -25,10 +28,12 @@ button{
   background-color: #03506f;
   text-align: center;
   border-radius:5px;
+  border: 2px solid #ffe3de;;
 }
 h4{
   background-color: #a3ddcb;
   color: black;
+
 }
 button {
   background-color: #3E53A5;
